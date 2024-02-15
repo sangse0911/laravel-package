@@ -1,7 +1,6 @@
 {
     "name": "sangtm/platform",
     "description": "this package write to custom laravel write by package",
-    "minimum-stability": "dev",
     "prefer-stable": true,
     "license": "proprietary",
     "authors": [
