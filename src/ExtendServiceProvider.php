@@ -2,16 +2,14 @@
 
 namespace Plugin;
 
-use DirectoryIterator;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\ServiceProvider;
-// use Plugin\MakeResource\src\Providers\ModuleServiceProvider;
+use Illuminate\Support\ServiceProvider as IlluminateServiceProvider;
 use Illuminate\Support\Str;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 use Illuminate\Support\Facades\Route;
 
-class ExtendServiceProvider extends ServiceProvider
+class ExtendServiceProvider extends IlluminateServiceProvider
 {
     public function boot()
     {
@@ -20,9 +18,6 @@ class ExtendServiceProvider extends ServiceProvider
 
     public function register(): void
     {
-
-        // $this->app->register(ModuleServiceProvider::class);
-
         $listModule = array_map('basename', File::directories(__DIR__ . '/plugins'));
         foreach ($listModule as $module) {
             $publishName = Str::of($module)->before("Module")->lower();
@@ -38,9 +33,7 @@ class ExtendServiceProvider extends ServiceProvider
                     $this->loadRoutesFrom($route);
                 }
                 if (Str::match('/.*api.php$/', $route)) {
-                    Route::prefix('api')->group(function () use ($route) {
-                        $this->loadRoutesFrom($route);
-                    });
+                    Route::prefix('api')->group(fn() => $this->loadRoutesFrom($route));
                 }
             }
             // load database migration
