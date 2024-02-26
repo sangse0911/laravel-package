@@ -11,10 +11,7 @@ use Illuminate\Support\Facades\Route;
 
 class ExtendServiceProvider extends IlluminateServiceProvider
 {
-    public function boot()
-    {
-
-    }
+    public function boot() {}
 
     public function register(): void
     {

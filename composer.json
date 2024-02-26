@@ -23,9 +23,7 @@
             "providers": [
                 "Vision\\Plugin\\ExtendServiceProvider"
             ],
-            "aliases": {
-
-            }
+            "aliases": {}
         }
     },
     "config": {
