@@ -1,6 +1,6 @@
 <?php
 
-namespace Plugin;
+namespace Vision\Plugin;
 
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\ServiceProvider as IlluminateServiceProvider;

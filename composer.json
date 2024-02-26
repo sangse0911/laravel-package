@@ -18,11 +18,6 @@
             "Vision\\Plugin\\": "src/"
         }
     },
-    "config": {
-        "allow-plugins": {
-            "wikimedia/composer-merge-plugin": true
-        }
-    },
     "extra": {
         "laravel": {
             "providers": [
@@ -31,6 +26,11 @@
             "aliases": {
 
             }
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "wikimedia/composer-merge-plugin": true
         }
     }
 }
