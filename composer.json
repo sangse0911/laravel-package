@@ -15,8 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Vision\\Plugin\\": "src/",
-            "Platform\\": "platform/"
+            "Vision\\Plugin\\": "src/"
         }
     },
     "extra": {
