@@ -65,11 +65,8 @@ class ExtendServiceProvider extends IlluminateServiceProvider
                 if ($this->checkIsDirectory($modulePath . "/" . $module . "/app/Providers")) {
                     $listProvider = $this->getRecursiveFileInDirectory($modulePath . "/" . $module . "/app/Providers");
                     foreach ($listProvider as $provider) {
-                        $provider = preg_replace("/\//", "\\", $provider);
-                        // dd($provider);
-                        // $provider = preg_replace("/\..*/", "", Str::afterLast($provider, "/"));
-                        // dd($modulePath . "/" . $module . $provider);
-                        // $this->app->register($provider);
+                        $provider = preg_replace("/\..*/", "", Str::afterLast($provider, "/"));
+                        $this->app->register("Platform\modules\\{$module}\\app\Providers\\{$provider}");
                     }
                 }
                 // load function helper
