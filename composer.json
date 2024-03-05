@@ -30,6 +30,20 @@
         "allow-plugins": {
             "wikimedia/composer-merge-plugin": true
         },
-        "vendor-dir": "content/vendor"
-    }
+        "vendor-dir": "plugins"
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "test",
+                "version": "1.0",
+                "source": {
+                    "url": "https://github.com/sangse0911/vue",
+                    "type": "github",
+                    "reference": "branches/master"
+                }
+            }
+        }
+    ]
 }
