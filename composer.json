@@ -36,12 +36,12 @@
         {
             "type": "package",
             "package": {
-                "name": "test",
-                "version": "1.0",
+                "name": "sangse0911/vue",
+                "version": "master",
                 "source": {
-                    "url": "https://github.com/sangse0911/vue",
-                    "type": "github",
-                    "reference": "branches/master"
+                    "url": "https://github.com/sangse0911/vue.git",
+                    "type": "git",
+                    "reference": "master"
                 }
             }
         }
