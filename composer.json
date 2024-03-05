@@ -15,8 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Vision\\Plugin\\": "src/",
-            "Platform\\": "../../platform/"
+            "Vision\\Plugin\\": "src/"
         }
     },
     "extra": {
@@ -30,6 +29,7 @@
     "config": {
         "allow-plugins": {
             "wikimedia/composer-merge-plugin": true
-        }
+        },
+        "vendor-dir": "content/vendor"
     }
 }
